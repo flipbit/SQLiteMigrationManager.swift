@@ -40,8 +40,12 @@ public struct SQLiteMigrationManager {
    */
   public init?(url: NSURL, migrations: [Migration] = [], bundle: NSBundle? = nil) {
     do {
-      let db = try Connection(url.absoluteString)
-      self.init(db: db, migrations: migrations, bundle: bundle)
+      if let url = url.absoluteString {
+        let db = try Connection(url)
+        self.init(db: db, migrations: migrations, bundle: bundle)
+      } else {
+        return nil
+      }
     } catch {
       return nil
     }

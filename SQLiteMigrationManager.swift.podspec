@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SQLiteMigrationManager.swift"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "Migration manager for SQLite.swift"
   s.description  = <<-DESC
   Migration manager for SQLite.swift, based on FMDBMigrationManager.
@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/garriguv/SQLiteMigrationManager.swift.git", tag: s.version.to_s, submodules: true }
   s.source_files  = "SQLiteMigrationManager", "SQLiteMigrationManager/**/*.{h,m}"
 
-  s.dependency "SQLite.swift", "~> 0.9.2"
+  s.dependency "SQLite.swift", "~> 0.10.0"
 
 end
